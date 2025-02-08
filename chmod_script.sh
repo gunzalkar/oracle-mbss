@@ -19,6 +19,7 @@ cd "$1" || exit
 for file in *; do
     if [ -f "$file" ]; then
         chmod +x "$file"
+        dos2unix "$file"
         echo "Updated permission for $file"
     fi
 done
